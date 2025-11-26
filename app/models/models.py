@@ -23,6 +23,6 @@ class WorkoutPlan(Base):
   __tablename__ = "workout_plans"
   id = Column(Integer, primary_key=True, autoincrement=True)
   user_id = Column(Integer, ForeignKey('users.id')) 
-  weeks_start = Column(DateTime
+  weeks_start = Column(DateTime)
   plan_json = Column(JSON)
   generated_at = Column(DateTime, default=datetime.datetime.utcnow)
